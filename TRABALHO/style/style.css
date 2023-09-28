@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('/image/background.png');
+    background-size: cover;
+    background-position: center;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orange;
+}
+
+/*HEADER*/
+header{
+    position: relative;
+    padding: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease ;
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+
+.content{
+    background-size: cover;
+    justify-content: center;
+    height: 477px;
+    width: 480px;
+    border-radius: 35px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar{
+    width: 70px;
+    height: 15px;
+    border: 2px solid #000000;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.bar:hover{
+    background-color: orange;
+    transition: 1s;
+}
+
+/*Galeria*/
+
+input{
+    display: none;
+}
+.slides{
+    display: flex;
+    margin: 9px;
+    margin-left: 8px;
+    margin-top: 1px;
+    width: 500%;
+    height: 100%;
+}
+.slides{
+    width: 20%;
+    transition: .6s;
+}
+.slides img{
+    width: auto;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+#slide2:checked ~ .s1{
+    margin-left: -480px;
+}
+#slide3:checked ~ .s1{
+    margin-left: -960px;
+}
+#slide4:checked ~ .s1{
+    margin-left: -1440px;
+}
+
+/*CARDS DOS PRODUTOS*/
+
+.title{
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 100vh;
+    left: 44.5%;
+}
+.container{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: 19.5%;
+    border-radius: 20px;
+
+}
+.card1 {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: 25px;
+    left: 10vh;
+}
+.descrição1 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição1 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição1 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição1 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card1 img{
+    width: 90%;
+    height: 45%;
+}
+
+.card2 {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: -37vh;
+    left: 48vh;
+}
+.descrição2 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição2 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição2 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição2 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card2 img{
+    width: 90%;
+    height: 45%;
+}
+.card3 {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: -78vh;
+    left: 85vh;
+}
+.descrição3 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição3 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição3 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição3 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card3 img{
+    width: 90%;
+    height: 45%;
+}
+
+.card4 {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: -70vh;
+    left: 10vh;
+}
+.descrição4 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição4 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição4 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição4 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card4 img{
+    width: 90%;
+    height: 45%;
+}
+
+.card5 {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: -111vh;
+    left: 85.5vh;
+}
+.descrição5 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição5 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição5 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição5 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card5 img{
+    width: 90%;
+    height: 45%;
+}
+
+.card6 {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: -152vh;
+    left: 48vh;
+}
+.descrição6 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição6 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição6 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição6 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card6 img{
+    width: 90%;
+    height: 45%;
+}
+.card {
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px black;
+    position:relative;
+    top: -37vh;
+    left: 80vh;
+}
+.descrição5 h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.descrição5 h2{
+    text-align: center;
+    font-size: .9rem;
+    color: #000;
+}
+
+.descrição5 button{
+    margin-left: 15.5px;
+    background-color: black;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descrição5 button:hover{
+    transition: 1s;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+}
+.card5 img{
+    width: 90%;
+    height: 45%;
+}
+
+
+
+
+
+
+
+
